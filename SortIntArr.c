@@ -2,7 +2,6 @@
 #include <cs50.h>
 
 void selectionSort(int array[],int size);
-void minToMax(int array[],int size);
 
 int main(){
     int n;
@@ -36,21 +35,5 @@ void selectionSort(int array[],int size){
 		int temp = array[i];
 		array[i] = array[min];
 		array[min] = temp;
-	}
-}
-
-void minToMax(int array[],int size){
-	int max;
-	
-	for(int i=0;i<size;i++){
-		max  = i;
-		for(int j=i;j<size;j++){
-			if(array[j]>array[max]){
-				max= j;
-			}
-		}
-		int temp = array[i];
-		array[i] = array[max];
-		array[max] = temp;
 	}
 }
